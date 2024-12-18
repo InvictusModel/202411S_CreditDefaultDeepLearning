@@ -42,105 +42,6 @@ In conclusion, by adopting a strategic approach to lending that includes priorit
 With the increase in the total amount of bank loans and the existence of default repayment situations, our research aims to provide recommendations for banks' lending policies from multiple levels. We first put forward some overall strategic recommendations for the bank's lending. Next, we establish financial models, such as Logistic Regression Model, Random Forest, KNN, Neural Networks to predict the credit and default repayment probability of customers based on their personal and financial background information. Finally, we conducted research on the optimal lending amount based on the NPV model. In summary, our research makes contributions to the bank's credit evaluation of customers and optimization of lending policies.
 
 
-# <a name="_toc179389415"></a>**Table of Contents** 
-[**EXECUTIVE SUMMARY](#_toc179389410)**
-
-[*Part I: How to Lend - Effective Lending Strategies](#_toc179389411)
-
-[*Part II: How to Lend Wisely](#_toc179389412)
-
-[*Part III: How Much to Lend](#_toc179389413)
-
-
-
-
-[**1. INTRODUCTION	****](#_toc179389416)
-
-[1.1 Background and Context	](#_toc179389417)
-
-[1.2 Problem Statement	](#_toc179389418)
-
-[1.3 Objectives	](#_toc179389419)
-
-[1.4 Scope and Structure	](#_toc179389420)
-
-[**2. HOW TO LEND - EFFECTIVE LENDING STRATEGIES	****](#_toc179389421)
-
-[2.1 METHODOLOGY](#_toc179389422)
-
-[*2.1.1 Data Sources](#_toc179389423)
-
-[*2.1.2 Data Preprocessing](#_toc179389424)
-
-[*2.1.3 Analytical Approach](#_toc179389425)
-
-[2.2 ANALYSIS AND RESULTS](#_toc179389426)
-
-[*2.2.1 Findings from Data Analysis](#_toc179389427)
-
-[*2.2.2 Interpretation](#_toc179389428)
-
-[**3.**	**HOW TO LEND WISELY - RISK-AWARE LENDING PRACTICES	11****](#_toc179389429)
-
-[Part 1 Personal Background Information](#_toc179389430)
-
-[3.1 METHODOLOGY](#_toc179389431)
-
-[*3.1.1 Objective](#_toc179389432)
-
-[*3.1.2 Dataset](#_toc179389433)
-
-[*3.1.3 Exploratory Data Analysis	](#_toc179389434)
-
-[*3.1.4 Feature Engineering](#_toc179389435)
-
-[*3.1.5 Model Implementation](#_toc179389436)
-
-[3.2 ANALYSIS AND RESULTS](#_toc179389437)
-
-[*3.2.1 Prediction of Late Payment](#_toc179389438)
-
-[*3.2.2 Importance of Background Characteristics Variables on Predicting Late Payment](#_toc179389439)
-
-[Part 2 Financial Background Information](#_toc179389440)
-
-[3.3 METHODOLOGY](#_toc179389441)
-
-[*3.3.1 Data Preprocessing**](#_toc179389442)
-
-[*3.3.2 Random Forest**](#_toc179389443)
-
-[*3.3.3 Deep Learning**](#_toc179389444)
-
-[*3.3.4 KNN**](#_toc179389445)
-
-[*3.3.5 Other Models**](#_toc179389446)
-
-[**4. HOW MUCH TO LEND - DETERMINING OPTIMAL LOAN AMOUNTS](#_toc179389447)
-
-[4.1 Research on NPV optimization](#_toc179389448)
-
-[4.2 Analysis Preparation	](#_toc179389449)
-
-[*4.2.1 Definition: Understanding NPV**](#_toc179389450)
-
-[*4.2.2 The Formula of NPV**](#_toc179389451)
-
-[*4.2.3 Theoretical Foundation**](#_toc179389452)
-
-[4.3 Model Building and Results](#_toc179389453)
-
-[**5. RECOMMENDATIONS (EXECUTIVE SUMMARY)****](#_toc179389454)
-
-[**6. CONCLUSION****](#_toc179389455)
-
-[**REFERENCES****](#_toc179389456)
-
-[**APPENDICES****](#_toc179389457)
-
-
-
-
 # <a name="_toc179389416"></a>**1. Introduction**
 ## <a name="_toc179389417"></a>**1.1 Background and Context** 
 Bank lending strategies are vital for financial stability, economic growth, and consumer support, balancing loan issuance with risk management. (Bessis, 2011) Based on the updated data provided by Singapore's official data portal[^1], the total licensed moneylending loan quantum from 2013 to 2021 demonstrates an overall increasing trend, with some fluctuations in 2020 and 2021. In contrast, the total amount of outstanding licensed money lending loans has steadily increased year-over-year throughout the same period.
@@ -148,6 +49,8 @@ Bank lending strategies are vital for financial stability, economic growth, and 
 | ![Pasted image 20241218223043.png](images/Pasted%20image%2020241218223043.png) | ![Pasted image 20241218222907.png](images/Pasted%20image%2020241218222907.png) |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | _Figure 1.1 Total Licensed Moneylending Loan Quantum (2013-2021)_              | _Figure 1.2 Total Outstanding Licensed Moneylending Loans (2013-2021)_         |
+
+
 Banks face significant challenges in loan issuance, including assessing creditworthiness, adapting to macroeconomic shifts, and minimizing delinquency risks. The COVID-19 pandemic amplified market volatility and borrower uncertainty, underscoring the need for robust lending strategies and risk models. (Boubaker & Nguyen, 2022) Effective adaptation ensures sustainable growth and supports the stability of both the financial system and the broader economy.
 ## <a name="_toc179389418"></a>**1.2 Problem Statement** 
 The core problem identified in this study revolves around the dilemma of loan approval decisions: on one hand, if the applicant is likely to repay the loan, denying the application results in a lost business opportunity for the bank. On the other hand, if the applicant is unlikely to repay the loan and defaults, approving it would lead to financial losses. Therefore, the challenge for banks is to accurately predict these scenarios to maximize revenue while minimizing risks, striking an effective balance between business growth and risk management.
