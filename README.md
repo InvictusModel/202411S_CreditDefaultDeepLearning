@@ -37,107 +37,106 @@ Reasons:
 
 In conclusion, by adopting a strategic approach to lending that includes prioritizing low-risk borrowers, offering flexible repayment options, and utilizing data-driven models to assess risk, banks can achieve a more efficient and effective lending process. Additionally, by leveraging technological solutions to refine risk assessment and credit extension, banks can enhance their competitive edge in the financial market.
 
-**
+
 # <a name="_toc179389414"></a>**Abstract**
 With the increase in the total amount of bank loans and the existence of default repayment situations, our research aims to provide recommendations for banks' lending policies from multiple levels. We first put forward some overall strategic recommendations for the bank's lending. Next, we establish financial models, such as Logistic Regression Model, Random Forest, KNN, Neural Networks to predict the credit and default repayment probability of customers based on their personal and financial background information. Finally, we conducted research on the optimal lending amount based on the NPV model. In summary, our research makes contributions to the bank's credit evaluation of customers and optimization of lending policies.
 
 
 # <a name="_toc179389415"></a>**Table of Contents** 
-[**EXECUTIVE SUMMARY	2****](#_toc179389410)**
+[**EXECUTIVE SUMMARY](#_toc179389410)**
 
-[*Part I: How to Lend - Effective Lending Strategies	2**](#_toc179389411)
+[*Part I: How to Lend - Effective Lending Strategies](#_toc179389411)
 
-[*Part II: How to Lend Wisely	2**](#_toc179389412)
+[*Part II: How to Lend Wisely](#_toc179389412)
 
-[*Part III: How Much to Lend	3**](#_toc179389413)
+[*Part III: How Much to Lend](#_toc179389413)
 
-[**ABSTRACT (200-300 WORDS)	4****](#_toc179389414)
 
-[**TABLE OF CONTENTS	5****](#_toc179389415)
 
-[**1. INTRODUCTION	7****](#_toc179389416)
 
-[1.1 Background and Context	7](#_toc179389417)
+[**1. INTRODUCTION	****](#_toc179389416)
 
-[1.2 Problem Statement	7](#_toc179389418)
+[1.1 Background and Context	](#_toc179389417)
 
-[1.3 Objectives	8](#_toc179389419)
+[1.2 Problem Statement	](#_toc179389418)
 
-[1.4 Scope and Structure	8](#_toc179389420)
+[1.3 Objectives	](#_toc179389419)
 
-[**2. HOW TO LEND - EFFECTIVE LENDING STRATEGIES	8****](#_toc179389421)
+[1.4 Scope and Structure	](#_toc179389420)
 
-[2.1 METHODOLOGY	8](#_toc179389422)
+[**2. HOW TO LEND - EFFECTIVE LENDING STRATEGIES	****](#_toc179389421)
 
-[*2.1.1 Data Sources	8**](#_toc179389423)
+[2.1 METHODOLOGY](#_toc179389422)
 
-[*2.1.2 Data Preprocessing	8**](#_toc179389424)
+[*2.1.1 Data Sources](#_toc179389423)
 
-[*2.1.3 Analytical Approach	8**](#_toc179389425)
+[*2.1.2 Data Preprocessing](#_toc179389424)
 
-[2.2 ANALYSIS AND RESULTS	9](#_toc179389426)
+[*2.1.3 Analytical Approach](#_toc179389425)
 
-[*2.2.1 Findings from Data Analysis	9**](#_toc179389427)
+[2.2 ANALYSIS AND RESULTS](#_toc179389426)
 
-[*2.2.2 Interpretation	10**](#_toc179389428)
+[*2.2.1 Findings from Data Analysis](#_toc179389427)
+
+[*2.2.2 Interpretation](#_toc179389428)
 
 [**3.**	**HOW TO LEND WISELY - RISK-AWARE LENDING PRACTICES	11****](#_toc179389429)
 
-[Part 1 Personal Background Information	11](#_toc179389430)
+[Part 1 Personal Background Information](#_toc179389430)
 
-[3.1 METHODOLOGY	11](#_toc179389431)
+[3.1 METHODOLOGY](#_toc179389431)
 
-[*3.1.1 Objective	11**](#_toc179389432)
+[*3.1.1 Objective](#_toc179389432)
 
-[*3.1.2 Dataset	11**](#_toc179389433)
+[*3.1.2 Dataset](#_toc179389433)
 
-[*3.1.3 Exploratory Data Analysis	11**](#_toc179389434)
+[*3.1.3 Exploratory Data Analysis	](#_toc179389434)
 
-[*3.1.4 Feature Engineering	13**](#_toc179389435)
+[*3.1.4 Feature Engineering](#_toc179389435)
 
-[*3.1.5 Model Implementation	14**](#_toc179389436)
+[*3.1.5 Model Implementation](#_toc179389436)
 
-[3.2 ANALYSIS AND RESULTS	15](#_toc179389437)
+[3.2 ANALYSIS AND RESULTS](#_toc179389437)
 
-[*3.2.1 Prediction of Late Payment	15**](#_toc179389438)
+[*3.2.1 Prediction of Late Payment](#_toc179389438)
 
-[*3.2.2 Importance of Background Characteristics Variables on Predicting Late Payment	16**](#_toc179389439)
+[*3.2.2 Importance of Background Characteristics Variables on Predicting Late Payment](#_toc179389439)
 
-[Part 2 Financial Background Information	17](#_toc179389440)
+[Part 2 Financial Background Information](#_toc179389440)
 
-[3.3 METHODOLOGY	17](#_toc179389441)
+[3.3 METHODOLOGY](#_toc179389441)
 
-[*3.3.1 Data Preprocessing	17**](#_toc179389442)
+[*3.3.1 Data Preprocessing**](#_toc179389442)
 
-[*3.3.2 Random Forest	17**](#_toc179389443)
+[*3.3.2 Random Forest**](#_toc179389443)
 
-[*3.3.3 Deep Learning	19**](#_toc179389444)
+[*3.3.3 Deep Learning**](#_toc179389444)
 
-[*3.3.4 KNN	21**](#_toc179389445)
+[*3.3.4 KNN**](#_toc179389445)
 
-[*3.3.5 Other Models	22**](#_toc179389446)
+[*3.3.5 Other Models**](#_toc179389446)
 
-[**4. HOW MUCH TO LEND - DETERMINING OPTIMAL LOAN AMOUNTS	22****](#_toc179389447)
+[**4. HOW MUCH TO LEND - DETERMINING OPTIMAL LOAN AMOUNTS](#_toc179389447)
 
-[4.1 Research on NPV optimization	22](#_toc179389448)
+[4.1 Research on NPV optimization](#_toc179389448)
 
-[4.2 Analysis Preparation	23](#_toc179389449)
+[4.2 Analysis Preparation	](#_toc179389449)
 
-[*4.2.1 Definition: Understanding NPV	23**](#_toc179389450)
+[*4.2.1 Definition: Understanding NPV**](#_toc179389450)
 
-[*4.2.2 The Formula of NPV	23**](#_toc179389451)
+[*4.2.2 The Formula of NPV**](#_toc179389451)
 
-[*4.2.3 Theoretical Foundation	24**](#_toc179389452)
+[*4.2.3 Theoretical Foundation**](#_toc179389452)
 
-[4.3 Model Building and Results	24](#_toc179389453)
+[4.3 Model Building and Results](#_toc179389453)
 
-[**5. RECOMMENDATIONS (EXECUTIVE SUMMARY)	25****](#_toc179389454)
+[**5. RECOMMENDATIONS (EXECUTIVE SUMMARY)****](#_toc179389454)
 
-[**6. CONCLUSION	26****](#_toc179389455)
+[**6. CONCLUSION****](#_toc179389455)
 
-[**REFERENCES	27****](#_toc179389456)
+[**REFERENCES****](#_toc179389456)
 
-[**APPENDICES	28****](#_toc179389457)
+[**APPENDICES****](#_toc179389457)
 
 
 
@@ -146,7 +145,7 @@ With the increase in the total amount of bank loans and the existence of default
 ## <a name="_toc179389417"></a>**1.1 Background and Context** 
 Bank lending strategies are vital for financial stability, economic growth, and consumer support, balancing loan issuance with risk management. (Bessis, 2011) Based on the updated data provided by Singapore's official data portal[^1], the total licensed moneylending loan quantum from 2013 to 2021 demonstrates an overall increasing trend, with some fluctuations in 2020 and 2021. In contrast, the total amount of outstanding licensed money lending loans has steadily increased year-over-year throughout the same period.
 
-| ![[images/Pasted image 20241218114030.png]]                       | ![[images/Pasted image 20241218114035.png]]<br>                        |
+| ![[images/Pasted image 20241218221718.png]]                       | ![[images/Pasted image 20241218114035.png]]                            |
 | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | _Figure 1.1 Total Licensed Moneylending Loan Quantum (2013-2021)_ | _Figure 1.2 Total Outstanding Licensed Moneylending Loans (2013-2021)_ |
 Banks face significant challenges in loan issuance, including assessing creditworthiness, adapting to macroeconomic shifts, and minimizing delinquency risks. The COVID-19 pandemic amplified market volatility and borrower uncertainty, underscoring the need for robust lending strategies and risk models. (Boubaker & Nguyen, 2022) Effective adaptation ensures sustainable growth and supports the stability of both the financial system and the broader economy.
