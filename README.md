@@ -145,9 +145,9 @@ With the increase in the total amount of bank loans and the existence of default
 ## <a name="_toc179389417"></a>**1.1 Background and Context** 
 Bank lending strategies are vital for financial stability, economic growth, and consumer support, balancing loan issuance with risk management. (Bessis, 2011) Based on the updated data provided by Singapore's official data portal[^1], the total licensed moneylending loan quantum from 2013 to 2021 demonstrates an overall increasing trend, with some fluctuations in 2020 and 2021. In contrast, the total amount of outstanding licensed money lending loans has steadily increased year-over-year throughout the same period.
 
-| ![[images/Pasted image 20241218221718.png]]                       | ![[images/Pasted image 20241218114035.png]]                            |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| _Figure 1.1 Total Licensed Moneylending Loan Quantum (2013-2021)_ | _Figure 1.2 Total Outstanding Licensed Moneylending Loans (2013-2021)_ |
+| ![Pasted image 20241218223043.png](images/Pasted%20image%2020241218223043.png) | ![Pasted image 20241218222907.png](images/Pasted%20image%2020241218222907.png) |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| _Figure 1.1 Total Licensed Moneylending Loan Quantum (2013-2021)_              | _Figure 1.2 Total Outstanding Licensed Moneylending Loans (2013-2021)_         |
 Banks face significant challenges in loan issuance, including assessing creditworthiness, adapting to macroeconomic shifts, and minimizing delinquency risks. The COVID-19 pandemic amplified market volatility and borrower uncertainty, underscoring the need for robust lending strategies and risk models. (Boubaker & Nguyen, 2022) Effective adaptation ensures sustainable growth and supports the stability of both the financial system and the broader economy.
 ## <a name="_toc179389418"></a>**1.2 Problem Statement** 
 The core problem identified in this study revolves around the dilemma of loan approval decisions: on one hand, if the applicant is likely to repay the loan, denying the application results in a lost business opportunity for the bank. On the other hand, if the applicant is unlikely to repay the loan and defaults, approving it would lead to financial losses. Therefore, the challenge for banks is to accurately predict these scenarios to maximize revenue while minimizing risks, striking an effective balance between business growth and risk management.
@@ -444,7 +444,7 @@ International Accounting Standards Board. (2014). International Financial Report
 Loan Status Distribution by Loan Term shows that 83.96% of loans with a 36-month term were fully paid, while only 16.04% were charged off. In contrast, for 60-month loans, 67.21% were fully paid, and 32.79% were charged off. This indicates that shorter-term loans have a higher likelihood of being fully repaid, whereas longer-term loans carry a greater risk of default.
 
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.030.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.030.png)
 *Selected Features Descriptions of Part I Dataset*
 
 [^1]: Singapore's official data portal: https://data.gov.sg/ 
