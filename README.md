@@ -1,6 +1,5 @@
-
-# Optimizing Lending Strategies - Credit Default Analysis Based on Deep Learning
-# **— Recommendations for Banks on Loan Issuance and Risk Management**
+# **Optimizing Lending Strategies - Credit Default Analysis Based on Deep Learning**
+## **— Recommendations for Banks on Loan Issuance and Risk Management**
 
 
 9 Oct 2024
@@ -147,7 +146,7 @@ With the increase in the total amount of bank loans and the existence of default
 ## <a name="_toc179389417"></a>**1.1 Background and Context** 
 Bank lending strategies are vital for financial stability, economic growth, and consumer support, balancing loan issuance with risk management. (Bessis, 2011) Based on the updated data provided by Singapore's official data portal[^1], the total licensed moneylending loan quantum from 2013 to 2021 demonstrates an overall increasing trend, with some fluctuations in 2020 and 2021. In contrast, the total amount of outstanding licensed money lending loans has steadily increased year-over-year throughout the same period.
 
-| ![[Pasted image 20241218114030.png]]                              | ![[Pasted image 20241218114035.png]]                                   |
+| ![[images/Pasted image 20241218114030.png]]                       | ![[images/Pasted image 20241218114035.png]]<br>                        |
 | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | _Figure 1.1 Total Licensed Moneylending Loan Quantum (2013-2021)_ | _Figure 1.2 Total Outstanding Licensed Moneylending Loans (2013-2021)_ |
 Banks face significant challenges in loan issuance, including assessing creditworthiness, adapting to macroeconomic shifts, and minimizing delinquency risks. The COVID-19 pandemic amplified market volatility and borrower uncertainty, underscoring the need for robust lending strategies and risk models. (Boubaker & Nguyen, 2022) Effective adaptation ensures sustainable growth and supports the stability of both the financial system and the broader economy.
@@ -170,17 +169,18 @@ In this "How to Lend" section, we begin by analyzing the dataset from a broad pe
 ## <a name="_toc179389426"></a>**2.2 ANALYSIS AND RESULTS**
 ### <a name="_toc179389427"></a>**2.2.1 Findings from Data Analysis** 
 Loan Status Distribution by Home Ownership indicates that borrowers with a mortgage have the highest loan repayment rate, with 82.48% of loans fully paid and 17.52% charged off. Renters show a lower repayment rate, with 76.84% of loans fully paid and 23.16% charged off. Borrowers who own their homes have a fully paid rate of 79.34%, with 20.66% of loans charged off. This suggests that borrowers with mortgages tend to have better loan performance compared to renters or homeowners.
-![[Pasted image 20241218114203.png]]
+![[images/Pasted image 20241218114203.png]]
 _Figure 2.1 Loan Status Distribution by Home Ownership_
 
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.004.png)*Figure 2.1 Loan Status Distribution by Home Ownership*
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.004.png)
 
 To focus on the purposes of loan, loans for small businesses stand out with the highest default rate at 29%, indicating a higher risk for lenders in this sector. Meanwhile, debt consolidation loans, though showing a moderate default rate of 21%, have a significantly larger demand, making them a major part of the overall loan volume. On the other hand, wedding, vacation, and home improvement loans, which are linked to discretionary spending, represent a smaller portion of the total loans. However, their default rates, ranging from 16% to 18%, are still considerable and pose some level of risk.
 
 The correlation matrix below shows that loan amount and installment have a high correlation with a value of 0.95, indicating a strong linear relationship between these two variables in the dataset.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.005.png)The chart on the right indicates that loans with higher installment amounts tend to have higher charge-off rates. The Low Installment group has the lowest charge-off rate at 15.33%, while the Medium and High Installment groups have charge-off rates of 21.58% and 22.17%, respectively. This suggests that as installment amounts increase, the risk of default also rises, making installment size an important factor in evaluating loan risk.
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.005.png)
+The chart on the right indicates that loans with higher installment amounts tend to have higher charge-off rates. The Low Installment group has the lowest charge-off rate at 15.33%, while the Medium and High Installment groups have charge-off rates of 21.58% and 22.17%, respectively. This suggests that as installment amounts increase, the risk of default also rises, making installment size an important factor in evaluating loan risk.
 
 ### <a name="_toc179389428"></a>**2.2.2 Interpretation** 
 Considering the findings, we recommend that banks focus on approving loans with shorter terms, prioritize borrowers with mortgages, target debt consolidation purposes, and consider offering more flexible installment plans. The rationale for favoring short-term loans is straightforward, as these generally carry lower risk. Borrowers with mortgages tend to demonstrate lower default rates compared to renters or homeowners without mortgages, suggesting that banks might offer more favorable terms for this group.
@@ -205,7 +205,7 @@ The TARGET variable indicates loan repayment outcomes: 0 signifies that the loan
 
 With approximately 92% of loans being repaid and only 8% not repaid. This imbalance could potentially affect model performance, as most models may tend to predict the majority class.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.006.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.006.png)
 
 *Figure 3.1 Distribution of Target Variable*
 
@@ -213,11 +213,11 @@ With approximately 92% of loans being repaid and only 8% not repaid. This imbala
 
 In the DAYS\_EMPLOYED variable, the maximum value is 365243, indicating that the person started working about 1000 years before the application, which we consider an anomaly in the data.
 
-![[{5067B4DF-1C7F-4F3D-A7D9-93AE4516DD2D}.png]]
+![[images/{5067B4DF-1C7F-4F3D-A7D9-93AE4516DD2D}.png]]
 
 The default rate for clients without anomalies is 8.66%, while the default rate for clients with anomalies is 5.40%. This indicates that clients with anomalies values have a lower default rate than other clients. These anomalies may represent some meaningful patterns, we do not want to completely disregard them. Therefore, we consider setting these anomalies values as missing values.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.009.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.009.png)
 
 *Table 3.2 Summary of Default Rates for Employment Anomalies*
 
@@ -225,13 +225,13 @@ The default rate for clients without anomalies is 8.66%, while the default rate 
 
 Upon the selected features, 5 of them contain missing values. 
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.010.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.010.png)
 
 *Table 3.3 Summary of Missing Values*
 
 **OWN\_CAR\_AGE and FLAG\_OWN\_CAR**
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.011.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.011.png)
 
 *Table 3.4 Car Age by Car Ownership*
 
@@ -241,7 +241,7 @@ Upon the selected features, 5 of them contain missing values.
 
 There are 55372 records where both **OCCUPATION\_TYPE** and **DAYS\_EMPLOYED** are missing, suggesting a strong potential correlation between the two, where the absence of occupation type likely indicates unemployment, leading to missing employment days.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.012.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.012.png)
 
 *Table 3.5 Cross-Table of Missing Values*
 ### <a name="_toc179389435"></a>**3.1.4 Feature Engineering**
@@ -271,20 +271,20 @@ where TP, TN, FP, and FN represent the true positives, true negatives, false pos
 
 After dividing sample, building prediction models and comparing the performance, we further investigate the differences of importance of background characteristics on predicting clients’ repayment default behavior based on both mean decrease in accuracy (MDA) and mean decrease in gini (MDG). MDA assesses feature importance by measuring the contribution of features to model predictions, while MDG measures the average contribution of features to reducing impurity across all trees. Overall, our whole research flow is shown in the figure below.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.013.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.013.png)
 
 *Figure 3.3 Flow charts for model training and prediction*
 ## <a name="_toc179389437"></a>**3.2 ANALYSIS AND RESULTS**
 ### <a name="_toc179389438"></a>**3.2.1 Prediction of Late Payment**  
 To evaluate prediction performance of different models, we randomly selected 70% of the samples as the training set and used the remaining 30% as the test set. According to the figure, the AUC value for logistic regression is 0.708, which is more favorable compared to 0.700 for random forest. Looking at the accuracy, sensitivity, and specificity of both models, we can also see that the predictive performance of logistic regression is better than that of the random forest model. Therefore, for predicting loan defaults, the overall performance of the logistic regression model is higher than that of the random forest model.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.014.png)![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.015.jpeg)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.014.png)![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.015.jpeg)
 
 *Figure 3.4 Model comparison: prediction performance of different models*
 ### <a name="_toc179389439"></a>**3.2.2 Importance of Background Characteristics Variables on Predicting Late Payment**
 According to the figure, regardless of which metric is used, the borrower's external credit score and age are the two most important background features for predicting with the random forest model. However, there are differences: based on MDA, the borrower's education level, gender, and years of employment rank as the third, fourth, and fifth most significant contributors to the model's prediction accuracy, respectively. In contrast, based on MDG, the borrower's years of employment, population of the residence area, and income rank as the third, fourth, and fifth background features that contribute most to the model's predictions.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.016.jpeg)![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.017.jpeg)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.016.jpeg)![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.017.jpeg)
 
 *Figure 3.5 Importance of background characteristics in modelling*
 
@@ -312,13 +312,13 @@ Since this project involves predictive analysis of "Credit Score," we observed t
 
 Next, we chose to use a decision tree model. But since a single decision tree is prone to overfitting, the results were still inadequate in correctly classifying the three categories. Therefore, we considered using a Random Forest model. The core idea of Random Forest is to reduce the overfitting risk of individual decision trees through randomness, thereby enhancing the model's generalization ability. Compared to a single decision tree, the Random Forest model is less likely to overfit, handles outliers better, and is suitable for classification problems. Therefore, we decided to try the Random Forest model.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.018.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.018.png)
 
 *Figure 3.6 Schematic diagram of random forest model*
 
 During model training, we used the default hyperparameters with a random state of 66. The model uses K-fold cross-validation to determine the best model. First, the dataset is divided into 5 parts, and in each iteration, 4 parts are used for training, while the remaining one part is used for testing. This process is repeated 5 times, with a different group used as the test set each time. Finally, the average of the 5 results is taken as the final evaluation of the model. The model will use the number of trees ranging from 50 to 200 and the depth from 0 to 30 to select the best model. Through K-fold cross-validation, the best model was found when the number of trees was 175 and the depth was 0, where the model was able to achieve the best prediction results. The model achieved an accuracy of 81% on the designated test set. Further evaluation showed a precision of 81%, a recall of 80%, and an F1-score of 81%. The model was most accurate in predicting the "Standard" category, achieving an accuracy of 83%. Analysis of each splitting node revealed that “Outstanding Debt”, “Interest Rate”, and “Credit Mix” were the features that had the most significant impact on the model's predictive ability. These three features provided the greatest gain to the model.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.019.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.019.png)
 
 *Figure 3.7 Feature Importance in Random Forest*
 ### <a name="_toc179389444"></a>**3.3.3 Deep Learning** 
@@ -329,7 +329,7 @@ During model training, we used the default hyperparameters with a random state o
 We employed a multi-layer neural network architecture to handle the task of predicting credit scores. This design leverages several layers of neurons to extract complex features and nonlinear relationships from the data.
 - **Fully Connected Layers (Dense Layers):** The model consists of dense layers with decreasing neuron counts (256, 128, 64, 32), each using the ReLU activation function to handle non-linearity and reduce vanishing gradients. This architecture allows the model to capture broad patterns in early layers and refine them in deeper layers, improving generalization.
 - **Output Layer and Softmax:** For the three-class credit score classification, the output layer has three neurons with Softmax activation, converting outputs into probabilities for each class, making predictions clear and interpretable.
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.020.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.020.png)
 
 *Figure 3.8 Feedforward Neural Network Diagram* 
 2. #### ***Model Optimization and Regularization***
@@ -343,15 +343,15 @@ We used sparse\_categorical\_crossentropy as the loss function for efficient mul
 
 The evaluation results of the model show that the loss function in the training process gradually converges, and the loss values of the verification set and the training set change similarly. The minimum loss value of the final verification set is 0.60, and the minimum loss value of the training set is 0.64, indicating that there is no obvious overfitting of the model in the training process. In terms of accuracy, the accuracy of the training set and the verification set gradually increased and became stable. The highest accuracy of the training set was 0.75, while the highest accuracy of the verification set was 0.74, indicating that the model had good generalization ability.
 
-|![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.021.png)*Figure 3.9 Loss Convergence Diagram*|![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.022.png)*Figure 3.10 Accuracy Diagram*|
-| :-: | :-: |
-|<p>![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.023.png)</p><p>**  *Figure 3.11 Classification Report*</p>|<p>![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.024.png)</p><p>*Figure 3.12 Confusion Matrix*</p>|
+|         ![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.021.png)*Figure 3.9 Loss Convergence Diagram*         |        ![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.022.png)*Figure 3.10 Accuracy Diagram*        |
+| :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------: |
+| <p>![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.023.png)</p><p>**  *Figure 3.11 Classification Report*</p> | <p>![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.024.png)</p><p>*Figure 3.12 Confusion Matrix*</p> |
 
 The confusion matrix further shows the model's performance in three categories, where class 0 and Class 1 have a high recall rate, while class 2 has a relatively low recall rate of about 0.60, indicating that the model still has room for improvement in recognizing class 2. Overall, the accuracy rate of the model is 0.75, the accuracy rate and the recall rate are relatively balanced, and the performance is relatively stable.
 ### <a name="_toc179389445"></a>**3.3.4 KNN** 
 Since this project aims to predict categorical data, the KNN (K-Nearest Neighbors) model is also a suitable choice to meet the project's requirements. The basic idea of KNN is for a given input sample, find the K-Nearest neighbors in the training set, and then predict the category of the input sample based on the categories of these neighbors. In this project, Euclidean distance is used to determine the similarity between samples.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.025.png)
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.025.png)
 
 Standardized data ensures that differences in numerical values do not affect the model's accuracy. The model uses K=5, which means the classification decision for a new sample is determined based on the majority category among its five nearest neighbors. The model's performance on the designated test set achieved an accuracy of 74%. Further evaluation showed a precision of 74%, a recall of 74%, and an F1-score of 74%. The model was most accurate in predicting the "Standard" category, achieving an accuracy of 74%.
 ### <a name="_toc179389446"></a>**3.3.5 Other Models**
@@ -376,7 +376,7 @@ In the context of banking and lending operations, Net Present Value (NPV) is a c
 ### <a name="_toc179389451"></a>**4.2.2 The Formula of NPV**
 The formula for calculating NPV is as follows:
 
-` `![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.026.png)
+` `![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.026.png)
 
 To fully comprehend the NPV formula, it is essential to dissect it into its constituent components, specifically the elements on either side of the subtraction operator.
 
@@ -399,23 +399,23 @@ The third step involves the application of the Sequential Least Squares Programm
 
 The final step involves visual analysis based on different user information. Various credit limits can be plotted against the NPV curve for a given user. High-credit users show a decline in the NPV curve only after a significantly high credit limit, whereas users with poor credit see a rapid decline in the curve even at a minimal credit limit, indicating a high expected default cost.
 
-![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.027.png) 	
+![](images/Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.027.png) 	
 
 *Figure 4.1 NPV under Different Amount of Lines of Credit (LoC)*
 # <a name="_toc179389454"></a>**5. Recommendations (Executive Summary)**
 
-|**Recommendations**|**Reasons**|
-| :- | :- |
-|**Part I: How to Lend - Effective Lending Strategies**||
-|Prioritize borrowers with mortgages|Borrowers with mortgages tend to have lower default rates due to their stable financial profile, demonstrated by their ability to secure and maintain mortgage payments.|
-|Target debt consolidation loans|Debt consolidation borrowers often have better financial literacy and money management skills.|
-|Introduce flexible installment plans|Flexible plans improve affordability and risk management.|
-|**Part II: How to Lend Wisely**||
-|Utilize clients’ personal background information to predict repayment default behavior|According to the importance of each personal background characteristic, external credit score, age, length of employment are the most influential factors and should be given greater consideration to make prediction.|
-|Use the strong correlation variable to fit model|During the training process of the model, the importance of variables was obtained. Therefore, in future attempts, banks can filter out some unimportant variables, ensuring that the variables used for credit prediction are those that have a strong impact on the model. This may improve the model's accuracy and other metrics.|
-|Select appropriate model to improve prediction accuracy|When predicting clients' late payment probability, we need to choose the model that best suits our needs, focusing on overall performance rather than specific algorithms.|
-|**Part III: How Much to Lend**||
-|Aim at maximizing the NPV under controllable risk of default|Leveraging the initial lines of credit, we can quantify a lower LoC for low-credit customers and higher LoC for high-credit customer|
+| **Recommendations**                                                                    | **Reasons**                                                                                                                                                                                                                                                                                                                           |
+| :------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Part I: How to Lend - Effective Lending Strategies**                                 |                                                                                                                                                                                                                                                                                                                                       |
+| Prioritize borrowers with mortgages                                                    | Borrowers with mortgages tend to have lower default rates due to their stable financial profile, demonstrated by their ability to secure and maintain mortgage payments.                                                                                                                                                              |
+| Target debt consolidation loans                                                        | Debt consolidation borrowers often have better financial literacy and money management skills.                                                                                                                                                                                                                                        |
+| Introduce flexible installment plans                                                   | Flexible plans improve affordability and risk management.                                                                                                                                                                                                                                                                             |
+| **Part II: How to Lend Wisely**                                                        |                                                                                                                                                                                                                                                                                                                                       |
+| Utilize clients’ personal background information to predict repayment default behavior | According to the importance of each personal background characteristic, external credit score, age, length of employment are the most influential factors and should be given greater consideration to make prediction.                                                                                                               |
+| Use the strong correlation variable to fit model                                       | During the training process of the model, the importance of variables was obtained. Therefore, in future attempts, banks can filter out some unimportant variables, ensuring that the variables used for credit prediction are those that have a strong impact on the model. This may improve the model's accuracy and other metrics. |
+| Select appropriate model to improve prediction accuracy                                | When predicting clients' late payment probability, we need to choose the model that best suits our needs, focusing on overall performance rather than specific algorithms.                                                                                                                                                            |
+| **Part III: How Much to Lend**                                                         |                                                                                                                                                                                                                                                                                                                                       |
+| Aim at maximizing the NPV under controllable risk of default                           | Leveraging the initial lines of credit, we can quantify a lower LoC for low-credit customers and higher LoC for high-credit customer                                                                                                                                                                                                  |
 
 # <a name="_toc179389455"></a>**6. Conclusion**
 In our study, we evaluated several models for predicting loan default behavior and found that machine learning models, especially the random forest model, outperformed traditional logistic regression. After optimizing the number of trees and depth, the random forest model achieved an 81% accuracy rate, with "outstanding debt," "interest rate," and "credit mix" being the most significant predictors. The KNN model and a deep learning model also showed good performance with accuracies of 74% and 75%, respectively. The random forest model excelled due to its high accuracy and ability to prevent overfitting, making it our top choice for predicting loan defaults.
@@ -448,3 +448,4 @@ Loan Status Distribution by Loan Term shows that 83.96% of loans with a 36-month
 ![](Aspose.Words.f8055a6a-1bcc-43c9-bc76-0009855d3c7a.030.png)
 *Selected Features Descriptions of Part I Dataset*
 
+[^1]: Singapore's official data portal: https://data.gov.sg/ 
